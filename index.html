@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M365 | Choosing the Right Tool</title>
+    <title>BDO | Upgrading to CoPilot Studio</title>
     
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +20,7 @@
                     },
                     colors: {
                         brand: {
-                            blue: '#0078D4', /* Microsoft Blue */
+                            red: '#EC1D24',
                             dark: '#0f172a',
                         }
                     }
@@ -34,10 +34,10 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #0078D4; }
+        ::-webkit-scrollbar-thumb:hover { background: #EC1D24; }
         
         .brand-gradient-text {
-            background: linear-gradient(to right, #0078D4, #60A5FA);
+            background: linear-gradient(to right, #EC1D24, #f87171);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -48,7 +48,7 @@
 
         .agenda-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(0, 120, 212, 0.4);
+            border-color: rgba(236, 29, 36, 0.4);
             background-color: rgba(30, 41, 59, 0.8);
         }
         
@@ -59,30 +59,29 @@
         }
     </style>
 </head>
-<body class="min-h-screen bg-slate-900 text-slate-100 font-sans selection:bg-brand-blue selection:text-white">
+<body class="min-h-screen bg-slate-900 text-slate-100 font-sans selection:bg-brand-red selection:text-white">
 
     <!-- Header / Hero Section -->
     <header class="relative overflow-hidden border-b border-slate-800 bg-slate-950 pt-16 pb-20">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-brand-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-brand-red/10 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="flex items-center gap-4 md:gap-6 mb-12">
-                <!-- Using a placeholder for a generic M365/Training logo to match structure -->
-                <img src="https://via.placeholder.com/150x50/0078D4/FFFFFF?text=TRAINING" alt="Training Logo" class="h-8 md:h-10 w-auto">
+                <img src="https://raw.githubusercontent.com/jerseyitguy/CopilotStudioCourse/main/bdo-white.png" alt="BDO Logo" class="h-8 md:h-10 w-auto" onerror="this.src='https://via.placeholder.com/150x50/EC1D24/FFFFFF?text=BDO+LOGO'">
                 <div class="h-6 w-px bg-slate-700"></div>
-                <span class="text-lg md:text-xl font-semibold tracking-tight text-slate-300 uppercase tracking-widest text-sm">Course 3: Foundation[cite: 2]</span>
+                <span class="text-lg md:text-xl font-semibold tracking-tight text-slate-300 uppercase tracking-widest text-sm">Training & Adoption</span>
             </div>
 
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-xs font-bold uppercase tracking-widest mb-6">
-                <i data-lucide="layers" class="w-4 h-4"></i>
-                Microsoft 365 Ecosystem Map[cite: 2]
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                Intelligent Automation Series: IA v AI
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-                Choosing the <br />
-                <span class="brand-gradient-text">Right M365 Tool</span>
+                Upgrading to <br />
+                <span class="brand-gradient-text">CoPilot Studio</span>
             </h1>
             <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
-                A 2.5-hour strategic session designed to help learners choose between personal storage, active teamwork, published intranet content, live co-creation, and structured tracking[cite: 2]. Move away from product tours and towards better workplace habits[cite: 2].
+                Advanced workflows for M365 CoPilot. Moving beyond simple drafts to complex data analysis and real-world integration.
             </p>
         </div>
     </header>
@@ -92,10 +91,10 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex items-center justify-between mb-12">
                 <div class="flex items-center gap-3">
-                    <i data-lucide="list-checks" class="w-8 h-8 text-brand-blue"></i>
+                    <i data-lucide="list-checks" class="w-8 h-8 text-brand-red"></i>
                     <h2 class="text-3xl font-bold">Session Curriculum</h2>
                 </div>
-                <span class="text-slate-500 text-sm font-mono uppercase">Core Modules[cite: 2]</span>
+                <span class="text-slate-500 text-sm font-mono uppercase">12 Core Modules</span>
             </div>
             
             <div id="agenda-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -106,16 +105,16 @@
 
     <!-- Interactive Walkthrough Section -->
     <section class="py-24 bg-slate-900 relative">
-        <div class="absolute right-0 top-1/4 w-96 h-96 bg-brand-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="absolute right-0 top-1/4 w-96 h-96 bg-brand-red/5 blur-[100px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-16 max-w-3xl">
                 <div class="flex items-center gap-3 mb-4">
-                    <i data-lucide="git-merge" class="w-8 h-8 text-brand-blue"></i>
-                    <h2 class="text-4xl font-bold uppercase tracking-tight">Foundational Decision Framework[cite: 2]</h2>
+                    <i data-lucide="microscope" class="w-8 h-8 text-brand-red"></i>
+                    <h2 class="text-4xl font-bold uppercase tracking-tight">The Tender Assistant Scenario</h2>
                 </div>
                 <p class="text-lg text-slate-400">
-                    Explore the expanded decision framework to stop information chaos, avoid duplicated files, and determine where your work should live based on ownership, audience, lifespan, structure, and collaboration style[cite: 2].
+                    A concrete Worked Example: Designing a 'hypothetical' Tender Assistant agent that demonstrates retrieval, task automation, and autonomous logic for Jersey-based enterprises.
                 </p>
             </div>
 
@@ -128,7 +127,7 @@
                 <!-- Step Content Display -->
                 <div class="lg:w-2/3">
                     <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 md:p-12 min-h-[600px] shadow-2xl relative overflow-hidden">
-                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-red/10 blur-[80px] rounded-full pointer-events-none"></div>
                         <div id="step-content-inner" class="relative w-full h-full">
                             <!-- Content populated by JS -->
                         </div>
@@ -142,8 +141,8 @@
     <section class="py-20 bg-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4 uppercase tracking-wider">Takeaway Principles[cite: 2]</h2>
-                <p class="text-slate-400">Expert-led golden rules to avoid long-term information chaos[cite: 2].</p>
+                <h2 class="text-3xl font-bold mb-4 uppercase tracking-wider">Takeaway Principles</h2>
+                <p class="text-slate-400">Expert-led golden rules for practical AI adoption and integration.</p>
             </div>
             <div id="practices-container" class="space-y-3">
                 <!-- Populated by JS -->
@@ -154,92 +153,97 @@
     <!-- Footer -->
     <footer class="bg-slate-950 py-16 border-t border-slate-800 text-center text-slate-500">
         <div class="flex flex-col items-center gap-6">
-            <img src="https://via.placeholder.com/100x30/FFFFFF/000000?text=TRAINING" alt="Training Logo" class="h-8 opacity-40 grayscale">
+            <img src="https://raw.githubusercontent.com/jerseyitguy/CopilotStudioCourse/main/bdo-white.png" alt="BDO Logo" class="h-8 opacity-40 grayscale" onerror="this.src='https://via.placeholder.com/100x30/FFFFFF/000000?text=BDO'">
             <div class="flex justify-center items-center gap-2">
-                <i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i>
-                <span class="font-bold tracking-widest uppercase text-xs">Training & Adoption | Course 3</span>
+                <i data-lucide="shield-check" class="w-5 h-5 text-brand-red"></i>
+                <span class="font-bold tracking-widest uppercase text-xs">Training & Adoption | 2026</span>
             </div>
-            <p class="text-xs max-w-md mx-auto opacity-60">Strategic habits for the Microsoft 365 ecosystem.</p>
+            <p class="text-xs max-w-md mx-auto opacity-60">Workplace examples for real-world application in Jersey.</p>
         </div>
     </footer>
 
     <script>
         // --- DATA ---
         const agendaItems = [
-            { id: 1, title: "The Problem: Information Chaos", desc: "Identify symptoms like duplicates, decisions hidden in chat, trackers in email, and team files in personal OneDrive[cite: 2].", icon: "alert-triangle" },
-            { id: 2, title: "M365 Ecosystem Map", desc: "Answer 'What are we trying to do?' by analyzing who owns the work, who needs access, and its lifespan[cite: 2].", icon: "map" },
-            { id: 3, title: "The Me, We, Us Model", desc: "Categorize tools by ownership: Me (OneDrive), We (Teams/SharePoint team site), and Us (SharePoint communication site)[cite: 2].", icon: "users" },
-            { id: 4, title: "Teams, SharePoint & OneDrive", desc: "Learn how Teams acts as the front door for teamwork while SharePoint provides the storage and document management[cite: 2].", icon: "layers" },
-            { id: 5, title: "SharePoint Governance", desc: "Differentiate between collaborative team spaces and publishing spaces, ensuring proper ownership, permissions, and lifecycle[cite: 2].", icon: "shield" },
-            { id: 6, title: "Loop & Lists", desc: "Transition from email chasers to structured tracking in Lists, and use Loop for lightweight, live co-creation[cite: 2].", icon: "refresh-cw" }
+            { id: 1, title: "Intro & Goals", desc: "Welcome and session overview; defining objectives for the advanced track.", icon: "flag" },
+            { id: 2, title: "Agent Recap", desc: "Agent types (Retrieval vs Task vs Autonomous), Orchestration, flows, variables, prompts & multi-agent design", icon: "history" },
+            { id: 4, title: "Use Case: Tender Assistant", desc: "Planning an agent to help understand bid requirements, and maintain session memory.", icon: "layout" },
+            { id: 5, title: "Setup & Instructions", desc: "Step 1: Creating the agent, defining instructions, and selecting the GPT-5 model.", icon: "settings" },
+            { id: 6, title: "Knowledge Sources", desc: "Step 2: Grounding with SharePoint/PDFs and ensuring data restriction to avoid hallucinations.", icon: "book-open" },
+            { id: 7, title: "Integrating Tools", desc: "Step 3: Connecting Power Automate and connectors (CRM, custom APIs) for actions.", icon: "hammer" },
+            { id: 8, title: "Custom Topics", desc: "Step 4: Authoring multi-step interactions and triggers (e.g., Create Tender).", icon: "message-square" },
+            { id: 9, title: "Variables & Memory", desc: "Step 5: Implementing Topic-level vs. Global variables to persist data across topics.", icon: "database" },
+            { id: 10, title: "Child Agents", desc: "Step 6: Modular design using specialised child agents (e.g., Bid Evaluator).", icon: "git-branch" },
+            { id: 11, title: "Test & Deployment", desc: "Step 7: Built-in tester walkthrough and publishing to Teams with SSO.", icon: "send" },
+            { id: 12, title: "Analytics", desc: "Managing performance: tracking session volumes, Bid scores, and tool usage.", icon: "bar-chart-3" },
+            { id: 13, title: "Best Practices", desc: "Governance, AI safety, and resources for continued learning (Microsoft Labs).", icon: "award" }
         ];
 
         const steps = [
             {
                 id: 1,
-                title: "Teams & Channels",
-                icon: "message-square",
-                content: "Teams is the working room where a group needs conversations, meetings, and shared files in one active workspace[cite: 2]. Use channels when the wider team may need visible context later, and avoid hiding project decision trails in private chat[cite: 2].",
-                tips: [
-                    "Teams is the working room[cite: 2].",
-                    "If the team needs the context, use a channel[cite: 2].",
-                    "Chat is quick, but it can hide context[cite: 2].",
-                    "A meeting should produce an artefact[cite: 2]."
-                ]
+                title: "Creation & Configuration",
+                icon: "settings",
+                content: "We create the 'Tender Creation Agent' in the full Copilot Studio portal. In the Agent Instructions, we define the role: 'You are a tender assistant... answer requirement questions... evaluate bids' We select GPT-5 and, crucially, disable 'Use general knowledge' to force reliance on trusted enterprise data only.",
+                tips: ["Instructions define role, tone, and guardrails.", "GPT-5 ensures high-quality NLU and generation.", "Disabling general knowledge prevents hallucinations."]
             },
             {
                 id: 2,
-                title: "SharePoint Sites",
-                icon: "globe",
-                content: "A SharePoint team site is for shared ownership, files, pages, and permissions[cite: 2]. Conversely, a SharePoint communication site is used to broadcast news, policies, or guidance to many readers[cite: 2]. Communication sites are not intended as a dumping ground for collaborative drafts[cite: 2].",
-                tips: [
-                    "SharePoint is the governed content platform[cite: 2].",
-                    "Communication sites are for publishing[cite: 2].",
-                    "Start page planning with reader tasks, not with what you want to upload[cite: 2]."
-                ]
+                title: "Knowledge Grounding",
+                icon: "book-open",
+                content: "Add 'brains' by connecting SharePoint sites and uploading PDFs (Tone of voice, Client info). Copilot Studio uses a RAG pipeline: searching internal docs, summarising answers, and providing citations. If a user asks 'Tell me about X Client', the agent retrieves steps directly from your internal files.",
+                tips: ["Graph search indexes SharePoint automatically.", "RAG summarises answers with source citations.", "Restrict to internal sources for technical accuracy."]
             },
             {
                 id: 3,
-                title: "OneDrive Lifecycle",
-                icon: "cloud",
-                content: "OneDrive is designed for personal drafts, private work, or selective sharing[cite: 2]. Microsoft notes that OneDrive files are private until shared[cite: 2]. It should be avoided for department archives or project records; those belong in a team-owned workspace[cite: 2].",
-                tips: [
-                    "OneDrive is mine first, shared second[cite: 2].",
-                    "Draft privately in OneDrive, share with named reviewers, then move/publish to Teams or SharePoint[cite: 2].",
-                    "A risk of using OneDrive for archives is dependency on individual sharing choices[cite: 2]."
-                ]
+                title: "Task Automation Tools",
+                icon: "hammer",
+                content: "Integrate a 'Document creation' Power Automate flow as a Tool. Provide a clear description (essential for the tender) and define inputs like 'Requirements'. We make 'Pipeline tracker' with Planner for internal system actions, allowing the agent to execute tasks triggered by natural language.",
+                tips: ["Tool descriptions help the agent's planner decide when to invoke it.", "1,500+ prebuilt connectors available.", "Inputs/Outputs bind UI variables to backend logic."]
             },
             {
                 id: 4,
-                title: "Microsoft Loop",
-                icon: "infinity",
-                content: "Loop components provide portable, synced pieces of content, while workspaces offer a shared canvas for pages, links, and tasks[cite: 2]. It is ideal when people need a small live checklist or note that stays in sync, but it should be avoided when you need formal records, metadata, or controlled publishing[cite: 2].",
-                tips: [
-                    "Loop is live co-creation, not a filing system[cite: 2].",
-                    "Use Loop when the work is still forming[cite: 2].",
-                    "Access in workspaces must be managed entirely separately[cite: 2]."
-                ]
+                title: "Topics & Advanced Triggers",
+                icon: "message-square",
+                content: "Create a 'Requirements Workflow' topic with the instructions looking for trigger works like 'create tender'. We use the authoring canvas to design a guided dialogue: Ask for details -> Doc Title -> Call Action (Tool) -> Send Confirmation Messages and links to documents created.",
+                tips: ["Advanced authoring mode = Turn-by-turn control.", "Triggers route the user into specific logic branches.", "Use 'Ask a question' nodes to fill required variables."]
             },
             {
                 id: 5,
-                title: "Microsoft Lists",
-                icon: "layout-list",
-                content: "Microsoft Lists is used to track issues, assets, routines, contacts, inventory, or status, equipped with views, rules, and alerts[cite: 2]. It is the correct tool choice to replace messy trackers and email chasers[cite: 2].",
-                tips: [
-                    "Lists replace messy trackers and email chasers[cite: 2].",
-                    "Lists is not just Excel with extra steps; it is for repeatable, structured tracking[cite: 2].",
-                    "Avoid Lists if you are simply writing a narrative document[cite: 2]."
-                ]
+                title: "Variables & Memory",
+                icon: "database",
+                content: "We store the Requirements in a Topic-level variable for the reset flow. To persist data (like Title & Requirements) across the entire session, we upgrade them to Global Variables. This enables conversation memory: if a user later asks 'What did we just do?', the agent can recall the Requirements and session context perfectly.",
+                tips: ["Topic Variables = Current workflow context.", "Global Variables = Cross-topic session memory.", "Variables carry state, avoiding repetitive questions."]
+            },
+            {
+                id: 6,
+                title: "Modular Child Agents",
+                icon: "git-branch",
+                content: "For scale, we create a 'Bid Evaluator' child agent. This sub-agent has specialised knowledge on bid evaluation. The main parent agent automatically routes bid-specific queries to this child, keeping the architecture modular and maintainable as the scope grows.",
+                tips: ["Child agents are embedded and version-controlled.", "Prevents 'monolith' bots that are hard to update.", "Parent-child handovers are transparent to the user."]
+            },
+            {
+                id: 7,
+                title: "Deployment & Channels",
+                icon: "send",
+                content: "We deploy the agent to Microsoft Teams. We configure 'Microsoft (Entra ID)' authentication for Single Sign-On (SSO). Once published, users can chat with the bot in Teams, where it retrieves knowledge answers and executes password reset topics seamlessly within the workspace.",
+                tips: ["Publishes Teams app package automatically.", "SSO recognises internal employees instantly.", "Testing in Teams verifies rich card and auth rendering."]
+            },
+            {
+                id: 8,
+                title: "Analytics & Monitoring",
+                icon: "bar-chart-3",
+                content: "Post-deployment, we monitor the Analytics dashboard. We track session volumes, quality of bids in evaluator, and specific tool usage. We drill into abandoned conversation transcripts to refine topic triggers or add missing knowledge based on real user failures.",
+                tips: ["Resolution rate = Better Average bid scores", "Transcripts highlight knowledge gaps.", "Monitor tool success rates (e.g., flow failures)."]
             }
         ];
 
         const bestPractices = [
-            "Decide by owner, audience, and lifespan[cite: 2].",
-            "Teams is not just chat; it is the working room[cite: 2].",
-            "OneDrive is not a team filing cabinet; it is mine first, shared second[cite: 2].",
-            "Loop is not a filing system; it is for live co-creation[cite: 2].",
-            "Lists is not Excel with extra steps; use it for structured tracking[cite: 2].",
-            "Good governance is not bureaucracy. It is continuity[cite: 2]."
+            "Use structured topics for complex tasks requiring high precision.",
+            "Leverage connectors to perform actions (CRMs, Jira, etc.).",
+            "Employ variables to maintain context and avoid user repetition.",
+            "Modularise with child agents to manage specialised knowledge domains.",
+            "Continuously iterate based on Analytics and session transcript reviews."
         ];
 
         // --- STATE & RENDER ---
@@ -251,8 +255,8 @@
                 agendaCont.innerHTML = agendaItems.map(item => `
                     <div class="agenda-card bg-slate-900 border border-slate-800 rounded-xl p-5 transition-all duration-300">
                         <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-brand-blue/10 rounded-lg flex items-center justify-center shrink-0">
-                                <i data-lucide="${item.icon}" class="w-5 h-5 text-brand-blue"></i>
+                            <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="${item.icon}" class="w-5 h-5 text-brand-red"></i>
                             </div>
                             <div>
                                 <h3 class="font-bold text-slate-100 text-sm mb-1">${item.title}</h3>
@@ -267,7 +271,7 @@
             if (practicesCont) {
                 practicesCont.innerHTML = bestPractices.map((bp, i) => `
                     <div class="flex items-center gap-4 p-4 bg-slate-900 border border-slate-800 rounded-xl">
-                        <span class="text-brand-blue font-black text-sm">${(i + 1).toString().padStart(2, '0')}</span>
+                        <span class="text-brand-red font-black text-sm">${(i + 1).toString().padStart(2, '0')}</span>
                         <p class="text-slate-300 text-sm">${bp}</p>
                     </div>
                 `).join('');
@@ -283,12 +287,12 @@
                 const isActive = step.id === activeStepId;
                 return `
                     <button onclick="updateStep(${step.id})" class="flex items-center gap-4 p-4 rounded-xl text-left border transition-all duration-300 w-full 
-                        ${isActive ? 'bg-brand-blue/10 border-brand-blue/40 text-brand-blue shadow-lg' : 'bg-slate-950 border-slate-800 text-slate-500 hover:bg-slate-900 hover:text-slate-300'}">
-                        <div class="p-2 rounded-lg ${isActive ? 'bg-brand-blue/20' : 'bg-slate-800'} transition-colors">
+                        ${isActive ? 'bg-brand-red/10 border-brand-red/40 text-brand-red shadow-lg' : 'bg-slate-950 border-slate-800 text-slate-500 hover:bg-slate-900 hover:text-slate-300'}">
+                        <div class="p-2 rounded-lg ${isActive ? 'bg-brand-red/20' : 'bg-slate-800'} transition-colors">
                             <i data-lucide="${step.icon}" class="w-5 h-5"></i>
                         </div>
                         <div class="flex-1 font-medium text-sm">
-                            <div class="text-[10px] uppercase tracking-widest opacity-60 mb-0.5">Category ${step.id}</div>
+                            <div class="text-[10px] uppercase tracking-widest opacity-60 mb-0.5">Stage ${step.id}</div>
                             ${step.title}
                         </div>
                     </button>
@@ -300,12 +304,12 @@
                 return `
                     <div class="step-transition ${isActive ? 'opacity-100 translate-x-0 relative' : 'opacity-0 translate-x-12 absolute top-0 left-0 w-full pointer-events-none'}">
                         <div class="flex items-center gap-4 mb-8">
-                            <div class="p-4 bg-brand-blue/20 text-brand-blue rounded-2xl">
+                            <div class="p-4 bg-brand-red/20 text-brand-red rounded-2xl">
                                 <i data-lucide="${step.icon}" class="w-8 h-8"></i>
                             </div>
                             <div>
                                 <h3 class="text-3xl font-black text-slate-100 uppercase tracking-tight">${step.title}</h3>
-                                <div class="text-brand-blue text-xs font-bold tracking-[0.2em] uppercase mt-1">Tool Choice Insight</div>
+                                <div class="text-brand-red text-xs font-bold tracking-[0.2em] uppercase mt-1">Insight Protocol Phase ${step.id}</div>
                             </div>
                         </div>
                         
@@ -315,13 +319,13 @@
 
                         <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800">
                             <h4 class="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest mb-4">
-                                <i data-lucide="shield" class="w-4 h-4 text-brand-blue"></i>
-                                Trainer Guidelines
+                                <i data-lucide="shield" class="w-4 h-4 text-brand-red"></i>
+                                Professional Standards
                             </h4>
                             <ul class="space-y-4">
                                 ${step.tips.map(tip => `
                                     <li class="flex items-start gap-3 text-slate-400 text-sm">
-                                        <i data-lucide="arrow-right-circle" class="w-5 h-5 text-brand-blue shrink-0 mt-0.5"></i>
+                                        <i data-lucide="arrow-right-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
                                         <span>${tip}</span>
                                     </li>
                                 `).join('')}
