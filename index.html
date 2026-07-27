@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDO | Upgrading to CoPilot Studio</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Trebuchet MS"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#EC1D24',
+                            dark: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #EC1D24; }
+        
+        .brand-gradient-text {
+            background: linear-gradient(to right, #EC1D24, #f87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .step-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .agenda-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(236, 29, 36, 0.4);
+            background-color: rgba(30, 41, 59, 0.8);
+        }
+        
+        .content-scroll {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-100 font-sans selection:bg-brand-red selection:text-white">
+
+    <!-- Header / Hero Section -->
+    <header class="relative overflow-hidden border-b border-slate-800 bg-slate-950 pt-16 pb-20">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-brand-red/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-4 md:gap-6 mb-12">
+                <img src="https://raw.githubusercontent.com/jerseyitguy/CopilotStudioCourse/main/bdo-white.png" alt="BDO Logo" class="h-8 md:h-10 w-auto" onerror="this.src='https://via.placeholder.com/150x50/EC1D24/FFFFFF?text=BDO+LOGO'">
+                <div class="h-6 w-px bg-slate-700"></div>
+                <span class="text-lg md:text-xl font-semibold tracking-tight text-slate-300 uppercase tracking-widest text-sm">Training & Adoption</span>
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                Intelligent Automation Series: IA v AI
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Upgrading to <br />
+                <span class="brand-gradient-text">CoPilot Studio</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+                Advanced workflows for M365 CoPilot. Moving beyond simple drafts to complex data analysis and real-world integration.
+            </p>
+        </div>
+    </header>
+
+    <!-- Full Session Agenda Section -->
+    <section class="py-20 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between mb-12">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="list-checks" class="w-8 h-8 text-brand-red"></i>
+                    <h2 class="text-3xl font-bold">Session Curriculum</h2>
+                </div>
+                <span class="text-slate-500 text-sm font-mono uppercase">12 Core Modules</span>
+            </div>
+            
+            <div id="agenda-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Walkthrough Section -->
+    <section class="py-24 bg-slate-900 relative">
+        <div class="absolute right-0 top-1/4 w-96 h-96 bg-brand-red/5 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16 max-w-3xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <i data-lucide="microscope" class="w-8 h-8 text-brand-red"></i>
+                    <h2 class="text-4xl font-bold uppercase tracking-tight">The Tender Assistant Scenario</h2>
+                </div>
+                <p class="text-lg text-slate-400">
+                    A concrete Worked Example: Designing a 'hypothetical' Tender Assistant agent that demonstrates retrieval, task automation, and autonomous logic for Jersey-based enterprises.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Stepper Navigation -->
+                <div id="stepper-nav" class="lg:w-1/3 flex flex-col gap-2">
+                    <!-- Nav buttons populated by JS -->
+                </div>
+
+                <!-- Step Content Display -->
+                <div class="lg:w-2/3">
+                    <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 md:p-12 min-h-[600px] shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-red/10 blur-[80px] rounded-full pointer-events-none"></div>
+                        <div id="step-content-inner" class="relative w-full h-full">
+                            <!-- Content populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 uppercase tracking-wider">Takeaway Principles</h2>
+                <p class="text-slate-400">Expert-led golden rules for practical AI adoption and integration.</p>
+            </div>
+            <div id="practices-container" class="space-y-3">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-16 border-t border-slate-800 text-center text-slate-500">
+        <div class="flex flex-col items-center gap-6">
+            <img src="https://raw.githubusercontent.com/jerseyitguy/CopilotStudioCourse/main/bdo-white.png" alt="BDO Logo" class="h-8 opacity-40 grayscale" onerror="this.src='https://via.placeholder.com/100x30/FFFFFF/000000?text=BDO'">
+            <div class="flex justify-center items-center gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-brand-red"></i>
+                <span class="font-bold tracking-widest uppercase text-xs">Training & Adoption | 2026</span>
+            </div>
+            <p class="text-xs max-w-md mx-auto opacity-60">Workplace examples for real-world application in Jersey.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA ---
+        const agendaItems = [
+            { id: 1, title: "Intro & Goals", desc: "Welcome and session overview; defining objectives for the advanced track.", icon: "flag" },
+            { id: 2, title: "Agent Recap", desc: "Agent types (Retrieval vs Task vs Autonomous), Orchestration, flows, variables, prompts & multi-agent design", icon: "history" },
+            { id: 4, title: "Use Case: Tender Assistant", desc: "Planning an agent to help understand bid requirements, and maintain session memory.", icon: "layout" },
+            { id: 5, title: "Setup & Instructions", desc: "Step 1: Creating the agent, defining instructions, and selecting the GPT-5 model.", icon: "settings" },
+            { id: 6, title: "Knowledge Sources", desc: "Step 2: Grounding with SharePoint/PDFs and ensuring data restriction to avoid hallucinations.", icon: "book-open" },
+            { id: 7, title: "Integrating Tools", desc: "Step 3: Connecting Power Automate and connectors (CRM, custom APIs) for actions.", icon: "hammer" },
+            { id: 8, title: "Custom Topics", desc: "Step 4: Authoring multi-step interactions and triggers (e.g., Create Tender).", icon: "message-square" },
+            { id: 9, title: "Variables & Memory", desc: "Step 5: Implementing Topic-level vs. Global variables to persist data across topics.", icon: "database" },
+            { id: 10, title: "Child Agents", desc: "Step 6: Modular design using specialised child agents (e.g., Bid Evaluator).", icon: "git-branch" },
+            { id: 11, title: "Test & Deployment", desc: "Step 7: Built-in tester walkthrough and publishing to Teams with SSO.", icon: "send" },
+            { id: 12, title: "Analytics", desc: "Managing performance: tracking session volumes, Bid scores, and tool usage.", icon: "bar-chart-3" },
+            { id: 13, title: "Best Practices", desc: "Governance, AI safety, and resources for continued learning (Microsoft Labs).", icon: "award" }
+        ];
+
+        const steps = [
+            {
+                id: 1,
+                title: "Creation & Configuration",
+                icon: "settings",
+                content: "We create the 'Tender Creation Agent' in the full Copilot Studio portal. In the Agent Instructions, we define the role: 'You are a tender assistant... answer requirement questions... evaluate bids' We select GPT-5 and, crucially, disable 'Use general knowledge' to force reliance on trusted enterprise data only.",
+                tips: ["Instructions define role, tone, and guardrails.", "GPT-5 ensures high-quality NLU and generation.", "Disabling general knowledge prevents hallucinations."]
+            },
+            {
+                id: 2,
+                title: "Knowledge Grounding",
+                icon: "book-open",
+                content: "Add 'brains' by connecting SharePoint sites and uploading PDFs (Tone of voice, Client info). Copilot Studio uses a RAG pipeline: searching internal docs, summarising answers, and providing citations. If a user asks 'Tell me about X Client', the agent retrieves steps directly from your internal files.",
+                tips: ["Graph search indexes SharePoint automatically.", "RAG summarises answers with source citations.", "Restrict to internal sources for technical accuracy."]
+            },
+            {
+                id: 3,
+                title: "Task Automation Tools",
+                icon: "hammer",
+                content: "Integrate a 'Document creation' Power Automate flow as a Tool. Provide a clear description (essential for the tender) and define inputs like 'Requirements'. We make 'Pipeline tracker' with Planner for internal system actions, allowing the agent to execute tasks triggered by natural language.",
+                tips: ["Tool descriptions help the agent's planner decide when to invoke it.", "1,500+ prebuilt connectors available.", "Inputs/Outputs bind UI variables to backend logic."]
+            },
+            {
+                id: 4,
+                title: "Topics & Advanced Triggers",
+                icon: "message-square",
+                content: "Create a 'Requirements Workflow' topic with the instructions looking for trigger works like 'create tender'. We use the authoring canvas to design a guided dialogue: Ask for details -> Doc Title -> Call Action (Tool) -> Send Confirmation Messages and links to documents created.",
+                tips: ["Advanced authoring mode = Turn-by-turn control.", "Triggers route the user into specific logic branches.", "Use 'Ask a question' nodes to fill required variables."]
+            },
+            {
+                id: 5,
+                title: "Variables & Memory",
+                icon: "database",
+                content: "We store the Requirements in a Topic-level variable for the reset flow. To persist data (like Title & Requirements) across the entire session, we upgrade them to Global Variables. This enables conversation memory: if a user later asks 'What did we just do?', the agent can recall the Requirements and session context perfectly.",
+                tips: ["Topic Variables = Current workflow context.", "Global Variables = Cross-topic session memory.", "Variables carry state, avoiding repetitive questions."]
+            },
+            {
+                id: 6,
+                title: "Modular Child Agents",
+                icon: "git-branch",
+                content: "For scale, we create a 'Bid Evaluator' child agent. This sub-agent has specialised knowledge on bid evaluation. The main parent agent automatically routes bid-specific queries to this child, keeping the architecture modular and maintainable as the scope grows.",
+                tips: ["Child agents are embedded and version-controlled.", "Prevents 'monolith' bots that are hard to update.", "Parent-child handovers are transparent to the user."]
+            },
+            {
+                id: 7,
+                title: "Deployment & Channels",
+                icon: "send",
+                content: "We deploy the agent to Microsoft Teams. We configure 'Microsoft (Entra ID)' authentication for Single Sign-On (SSO). Once published, users can chat with the bot in Teams, where it retrieves knowledge answers and executes password reset topics seamlessly within the workspace.",
+                tips: ["Publishes Teams app package automatically.", "SSO recognises internal employees instantly.", "Testing in Teams verifies rich card and auth rendering."]
+            },
+            {
+                id: 8,
+                title: "Analytics & Monitoring",
+                icon: "bar-chart-3",
+                content: "Post-deployment, we monitor the Analytics dashboard. We track session volumes, quality of bids in evaluator, and specific tool usage. We drill into abandoned conversation transcripts to refine topic triggers or add missing knowledge based on real user failures.",
+                tips: ["Resolution rate = Better Average bid scores", "Transcripts highlight knowledge gaps.", "Monitor tool success rates (e.g., flow failures)."]
+            }
+        ];
+
+        const bestPractices = [
+            "Use structured topics for complex tasks requiring high precision.",
+            "Leverage connectors to perform actions (CRMs, Jira, etc.).",
+            "Employ variables to maintain context and avoid user repetition.",
+            "Modularise with child agents to manage specialised knowledge domains.",
+            "Continuously iterate based on Analytics and session transcript reviews."
+        ];
+
+        // --- STATE & RENDER ---
+        let activeStepId = 1;
+
+        function initData() {
+            const agendaCont = document.getElementById('agenda-container');
+            if (agendaCont) {
+                agendaCont.innerHTML = agendaItems.map(item => `
+                    <div class="agenda-card bg-slate-900 border border-slate-800 rounded-xl p-5 transition-all duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-red/10 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="${item.icon}" class="w-5 h-5 text-brand-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-100 text-sm mb-1">${item.title}</h3>
+                                <p class="text-slate-500 text-xs leading-relaxed">${item.desc}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const practicesCont = document.getElementById('practices-container');
+            if (practicesCont) {
+                practicesCont.innerHTML = bestPractices.map((bp, i) => `
+                    <div class="flex items-center gap-4 p-4 bg-slate-900 border border-slate-800 rounded-xl">
+                        <span class="text-brand-red font-black text-sm">${(i + 1).toString().padStart(2, '0')}</span>
+                        <p class="text-slate-300 text-sm">${bp}</p>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function renderStepper() {
+            const nav = document.getElementById('stepper-nav');
+            const cont = document.getElementById('step-content-inner');
+            if (!nav || !cont) return;
+
+            nav.innerHTML = steps.map(step => {
+                const isActive = step.id === activeStepId;
+                return `
+                    <button onclick="updateStep(${step.id})" class="flex items-center gap-4 p-4 rounded-xl text-left border transition-all duration-300 w-full 
+                        ${isActive ? 'bg-brand-red/10 border-brand-red/40 text-brand-red shadow-lg' : 'bg-slate-950 border-slate-800 text-slate-500 hover:bg-slate-900 hover:text-slate-300'}">
+                        <div class="p-2 rounded-lg ${isActive ? 'bg-brand-red/20' : 'bg-slate-800'} transition-colors">
+                            <i data-lucide="${step.icon}" class="w-5 h-5"></i>
+                        </div>
+                        <div class="flex-1 font-medium text-sm">
+                            <div class="text-[10px] uppercase tracking-widest opacity-60 mb-0.5">Stage ${step.id}</div>
+                            ${step.title}
+                        </div>
+                    </button>
+                `;
+            }).join('');
+
+            cont.innerHTML = steps.map(step => {
+                const isActive = step.id === activeStepId;
+                return `
+                    <div class="step-transition ${isActive ? 'opacity-100 translate-x-0 relative' : 'opacity-0 translate-x-12 absolute top-0 left-0 w-full pointer-events-none'}">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="p-4 bg-brand-red/20 text-brand-red rounded-2xl">
+                                <i data-lucide="${step.icon}" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-black text-slate-100 uppercase tracking-tight">${step.title}</h3>
+                                <div class="text-brand-red text-xs font-bold tracking-[0.2em] uppercase mt-1">Insight Protocol Phase ${step.id}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="content-scroll mb-10">
+                            <p class="text-xl text-slate-300 leading-relaxed">${step.content}</p>
+                        </div>
+
+                        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800">
+                            <h4 class="flex items-center gap-2 text-xs font-black text-slate-500 uppercase tracking-widest mb-4">
+                                <i data-lucide="shield" class="w-4 h-4 text-brand-red"></i>
+                                Professional Standards
+                            </h4>
+                            <ul class="space-y-4">
+                                ${step.tips.map(tip => `
+                                    <li class="flex items-start gap-3 text-slate-400 text-sm">
+                                        <i data-lucide="arrow-right-circle" class="w-5 h-5 text-brand-red shrink-0 mt-0.5"></i>
+                                        <span>${tip}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        window.updateStep = (id) => {
+            activeStepId = id;
+            renderStepper();
+        };
+
+        window.onload = function() {
+            initData();
+            renderStepper();
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>
 
